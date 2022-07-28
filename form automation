@@ -1,1 +1,3 @@
-this is for automating entries in the online form
+from selenium import webdriver
+driver = webdriver.Firefox(executable_path="D:\KVS\geckodriver-v0.31.0-win64\geckodriver.exe")
+driver.get("https://github.com/CodingforFunction/VBA")
