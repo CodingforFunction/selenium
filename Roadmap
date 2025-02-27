@@ -5,3 +5,8 @@ from selenium import webdriver
 driver = webdriver.chrome()
 driver.get("https://www.hrmsfci.in/mss/dashboard")
 only this is required
+
+C:\Program Files (x86)\Google\Chrome\Application>chrome.exe -incognito --remote-debugging-port=9125 
+https://ekharid.haryana.gov.in/fci/cmr_login --user-data-dir="D:\KVS\selena"
+browser port
+https://www.youtube.com/watch?v=Zrx8FSEo9lk
