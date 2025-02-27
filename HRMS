@@ -1,0 +1,6 @@
+from selenium import webdriver
+from selenium.webdriver.firefox.options import Options
+opt = Options()
+opt.add_experimental_option("debuggerAddress", "Localhost:9125")
+driver = webdriver.Firefox(firefox_options=opt)
+driver.get("https://www.hrmsfci.in/mss/dashboard")
