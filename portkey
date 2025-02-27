@@ -1,1 +1,14 @@
+C:\Users\uproe\AppData\Local\Mozilla Firefox\
+C:\Users\uproe\AppData\Local\Mozilla Firefox>firefox.exe  --remote-debugging-port=9125
 
+C:\Users\uproe\AppData\Local\Mozilla Firefox>firefox.exe -incognito --remote-debugging-port=9125 --user-data-dir="https://www.hrmsfci.in/mss/dashboard"
+
+"C:\Users\uproe\Documents\ffdata"
+
+https://www.hrmsfci.in/mss/dashboard
+
+
+
+
+C:\Program Files\Google\Chrome\Application\
+chrome.exe -incognito --remote-debugging-port=9125 --user-data-dir="C:\Users\uproe\Documents\chrdata"
