@@ -1,2 +1,7 @@
 to create the python code first install python
 python interpreter is needed for the setup, run first file.
+selenium 4 onwards 
+from selenium import webdriver
+driver = webdriver.chrome()
+driver.get("https://www.hrmsfci.in/mss/dashboard")
+only this is required
