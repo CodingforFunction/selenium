@@ -12,3 +12,21 @@ https://www.hrmsfci.in/mss/dashboard
 
 C:\Program Files\Google\Chrome\Application\
 chrome.exe -incognito --remote-debugging-port=9125 --user-data-dir="C:\Users\uproe\Documents\chrdata"
+
+
+
+
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+opt = Options()
+opt.add_experimental_option("debuggerAddress", "Localhost:9125")
+driver = webdriver.Chrome(options=opt)
+driver.get("https://www.hrmsfci.in/cb/transactions/tour-diary/list")
+'''driver.find_element(By.ID, "dop_member_comment").send_keys("TD201744")'''
+'''driver.find_element(By.CSS_SELECTOR, 'div[id='DataTables_Table_0_filter'] div[class='form-control input-sm']').Keys()'''
+driver.find_element(By.CLASS_NAME, "input.form-control input-sm").send_keys("TD201744")
