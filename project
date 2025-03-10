@@ -1,0 +1,24 @@
+import time
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+import os
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+opt = Options()
+opt.add_experimental_option("debuggerAddress", "Localhost:9125")
+driver = webdriver.Chrome(options=opt)
+driver.get("https://www.hrmsfci.in/mss/dashboard")
+diary = ["TD201744","TD159947"]
+for i in diary:
+    driver.get("https://www.hrmsfci.in/cb/transactions/tour-diary/list")
+    time.sleep(2)
+    driver.find_element(By.XPATH, "(//input[@type='search'])").send_keys(i)
+    time.sleep(2)
+    driver.find_element(By.XPATH, "(//i[@title='Review'])[1]").click()
+    driver.find_element(By.ID, "dop_member_comment").send_keys("महाप्रबंधक(क्षेत्र) द्वारा कर्मचारी की यात्रा ब्यौरा की सैद्धांतिक स्वीकृति दी गई है।")
+    driver.find_element(By.ID, "document_name").send_keys("यात्रा ब्यौरा की सैद्धांतिक स्वीकृति")
+    driver.find_element(By.ID, "supportive_document").send_keys(os.getcwd()+"/0002167.pdf")
+    driver.find_element(By.ID, "btn_add_doc").click()
